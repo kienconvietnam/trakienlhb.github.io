@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Các Loài Kiến</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(255, 0, 0);
+        }
+        h1 {
+            text-align: center;
+        }
+        h4 {
+       position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      color: #ff0026;
+    }
+        input[type="text"] {
+            width: 98%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        .ant {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            border-bottom: 1px solid #000000;
+        }
+        .ant img {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+a {
+      position: fixed;
+      top: 40px;
+      left: 1,5px;
+      z-index: 999;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      padding: 1px 1px;
+      background-color: #007bff;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+        .ant-info {
+            flex-grow: 1;
+        }
+        .ant-info p {
+            margin: 5px 0;
+        }
+        .ant {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .ant img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .ant-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 768px) {
+      .ant {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .ant img {
+        width: 90%;
+      }
+
+      .ant-info {
+        text-align: left;
+        padding: 0 12px;
+      }
+    }
+    </style>
+</head>
+<body style="background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230804/pngtree-a-close-up-picture-of-red-maple-leaves-in-the-fall-image_12997891.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+    <div class="container">
+        <h1>Tra Cứu Các Loài Kiến</h1>
+        <input type="text" id="search" placeholder="Nhập tên loài kiến...">
+        <div id="antList">
+            <style>
+                .ant-info h2 {
+                    color: #930505; /* Màu xanh dương */
+                }
+            </style>  
+            <div class="ant">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkJMrSx9bkeTnnhbc0TiXG0X8fdOoP2uYFAw&s" alt="Solenopsis invicta" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến lửa nhiệt đới (Solenopsis invicta)</h2>
+                    <p>Được biết đến rộng rãi là "kiến lửa" nhờ khả năng tấn công mạnh mẽ và nọc độc có thể gây bỏng. Đây là một loài kiến xâm lấn mạnh mẽ ở nhiều khu vực, đặc biệt là Bắc Mỹ và Australia.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến lửa trưởng thành dài khoảng 4–6 mm, màu đỏ nâu, có thân hình mảnh mai và đuôi dài. Khi bị tấn công, chúng có thể chích nhiều lần liên tiếp, gây cảm giác đau rát và sưng tấy.</p>
+                    <p><strong>Tập tính:</strong> Loài kiến này rất xâm lấn và có thể xây tổ ở bất cứ nơi nào từ đất, sân vườn, cho đến bên trong nhà. Chúng xây tổ ngầm và tạo ra các đồi tổ lớn, với hàng nghìn con kiến trong mỗi tổ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> **Solenopsis invicta** sở hữu **nọc độc mạnh** chứa alkaloid, có thể gây phản ứng dị ứng hoặc sốc cho một số người. Đặc biệt, loài này có thể tấn công một cách đồng loạt và có khả năng **di chuyển nhanh** khi tổ bị đe dọa. Kiến lửa cũng là loài rất **kiên trì và cứng đầu**, chúng có thể di chuyển một khoảng cách xa để tìm kiếm thức ăn hoặc mở rộng tổ.</p>
+                    <p><strong>Tác động:</strong> Được coi là mối đe dọa lớn đối với các hệ sinh thái tự nhiên vì khả năng cạnh tranh với các loài động vật khác và có thể gây tàn phá mùa màng. Nọc độc của chúng có thể gây kích ứng và là mối nguy hiểm cho những người nhạy cảm, đặc biệt là trẻ em hoặc người có hệ miễn dịch yếu.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Kiểm tra thường xuyên các khu vực tổ, đặc biệt là trong sân vườn hoặc xung quanh nhà. Các biện pháp kiểm soát bao gồm sử dụng thuốc diệt kiến chuyên dụng và loại bỏ các tổ mới phát hiện. Sử dụng bẫy mồi và phương pháp diệt tổ trên diện rộng để quản lý sự xâm lấn của loài này.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://static.wixstatic.com/media/7e8bb1_2e42f0a0f45d4300a080587d2847d524~mv2.jpg/v1/fill/w_509,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/7e8bb1_2e42f0a0f45d4300a080587d2847d524~mv2.jpg" alt="Solenopsis xyloni" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến gỗ (Solenopsis xyloni)</h2>
+                    <p>Loài kiến này thường được gọi là "kiến gỗ" và là một phần của nhóm Solenopsis có khả năng gây hại cho các loại cây trồng, làm tổ trong các khu vực có nhiều gỗ mục hoặc đất ẩm.</p>
+                    <p><strong>Đặc điểm:</strong> Dài khoảng 2–3 mm, màu nâu đỏ. Cơ thể mảnh mai và có khả năng di chuyển nhanh, thường xuất hiện trong khu vực có gỗ mục hoặc đất ẩm ướt.</p>
+                    <p><strong>Tập tính:</strong> Solenopsis xyloni xây tổ chủ yếu trong các khe nứt của gỗ mục hoặc dưới đất. Loài này có thể tấn công các loài động vật nhỏ và làm tổ ở khu vực sinh sống của chúng.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Cũng như các loài kiến lửa khác, Solenopsis xyloni sử dụng nọc độc của mình để tấn công kẻ thù, đồng thời cũng có khả năng làm tổ ở những khu vực khó tiếp cận, khiến việc kiểm soát trở nên khó khăn.</p>
+                    <p><strong>Tác động:</strong> Có thể gây ảnh hưởng đến các cây trồng và mùa màng, đồng thời tạo ra sự cạnh tranh trong các hệ sinh thái tự nhiên với các loài động vật khác.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Dùng thuốc diệt kiến hoặc các biện pháp tự nhiên như bẫy mồi để giảm thiểu sự xâm lấn của loài này trong các khu vực có cây cối hoặc đất nông nghiệp.</p>
+                </div>
+            </div>
+            
+            <div class="ant">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5_tvhvMoYJAPV8ij4K3onQA22NQi-VWDnw&s" alt="Kiến thợ mộc" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến thợ mộc (Camponotus gigas)</h2>
+                    <p>Là loài kiến lớn nhất hiện nay, thường làm tổ trong gỗ, có thể gây hư hại cho các công trình xây dựng nếu tổ của chúng phát triển mạnh.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến thợ mộc có cơ thể lớn, màu đen hoặc nâu sẫm, thân hình thô, và có thể dài tới 2.5 cm.</p>
+                    <p><strong>Tập tính:</strong> Sống trong các tổ gỗ bị mục nát hoặc cây cối chết. Chúng thường di chuyển chậm và có sự phân chia công việc rõ rệt trong đàn.</p>
+                    <p><strong>Tác động:</strong> Kiến thợ mộc không gây hại trực tiếp cho con người nhưng có thể làm hư hại các công trình xây dựng hoặc gỗ trong các công trình. Chúng có thể cắn nếu bị quấy rầy.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Sử dụng thuốc diệt côn trùng chuyên dụng, kiểm tra các tổ kiến trong gỗ hoặc các công trình xây dựng thường xuyên để phát hiện sớm và xử lý kịp thời.</p>
+                </div>
+            </div>                               
+            <div class="ant">
+                <img src="https://bugguide.net/images/raw/FZK/RCZ/FZKRCZMRJZQRFZZZFZZZYZERHH7ZHH8RQHERVLSZQHPRKH7ZAL7Z9LHZTZKRLHMZDLGRKHKZDLGR.jpg" alt="Kiến đen nhỏ" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến đen nhỏ (Monomorium minimum)</h2>
+                    <p>Loài kiến nhỏ, thường thấy trong nhà. Thích thực phẩm ngọt.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến nhỏ màu đen bóng, dài khoảng 2-3 mm.</p>
+                    <p><strong>Tập tính:</strong> Thường làm tổ ở các nơi ẩm thấp trong nhà, như trong tường hoặc dưới sàn nhà. Có xu hướng tìm kiếm thức ăn ngọt.</p>
+                    <p><strong>Tác động:</strong> Không gây hại nghiêm trọng nhưng có thể gây phiền toái trong nhà, đặc biệt là khi chúng tìm thấy thực phẩm. Dễ dàng xâm nhập vào các nguồn thực phẩm trong bếp.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Vệ sinh khu vực nấu ăn sạch sẽ, dùng mồi diệt kiến và bịt kín các khe nứt trong nhà.</p>
+                </div>
+            </div> 
+            <div class="ant">
+                <img src="https://www.antwiki.org/wiki/images/thumb/3/3b/A_Wild_Solenopsis_molesta_w.jpg/400px-A_Wild_Solenopsis_molesta_w.jpg" alt="Solenopsis molesta" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến quấy rầy (Solenopsis molesta)</h2>
+                    <p>Được biết đến là một trong những loài kiến quấy rầy trong gia đình, Solenopsis molesta thường xâm nhập vào các công trình xây dựng và làm tổ ở những khu vực kín đáo.</p>
+                    <p><strong>Đặc điểm:</strong> Kích thước khoảng 2–3 mm, màu nâu đến nâu đỏ. Chúng có cơ thể mảnh mai và khả năng sinh sản nhanh, tạo thành những đàn kiến lớn trong một thời gian ngắn.</p>
+                    <p><strong>Tập tính:</strong> Loài này thường xuyên làm tổ trong các khu vực trong nhà, đặc biệt là những nơi ẩm thấp, tối tăm. Chúng có khả năng sống sót trong nhiều điều kiện khắc nghiệt và thường xâm nhập vào nhà để tìm kiếm thức ăn.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Kiến molesta có khả năng tìm kiếm thức ăn nhanh chóng và làm tổ ở những nơi ít ai để ý, khiến việc kiểm soát rất khó khăn. Chúng không gây ra nọc độc nguy hiểm nhưng gây phiền toái do xâm nhập vào sinh hoạt hàng ngày.</p>
+                    <p><strong>Tác động:</strong> Sự xâm nhập của loài này có thể gây khó chịu cho con người, đặc biệt trong các khu vực sinh hoạt, nhà cửa. Chúng có thể làm hư hại đồ đạc và làm mất vệ sinh trong môi trường sống.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Loại bỏ các tổ trong nhà và các khu vực xung quanh, sử dụng thuốc diệt kiến, bẫy mồi để ngăn chặn sự xâm nhập.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://i.pinimg.com/736x/6e/a9/21/6ea921ed361bfcd00a3c6b104894b44e.jpg" alt="Tapinoma melanocephalum" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến ma (Tapinoma melanocephalum)</h2>
+                    <p>Loài kiến nhỏ, thường thấy trong nhà và các khu vực gần người ở nhiệt đới.</p>
+                    <p><strong>Đặc điểm:</strong> Cơ thể nhỏ, màu vàng nhạt hoặc nâu sáng, với đầu đen, dài khoảng 2–3 mm. Đặc biệt, có sự phân biệt rõ rệt giữa đầu và thân.</p>
+                    <p><strong>Tập tính:</strong> Loài kiến này rất thích hợp để sống trong các khu vực có độ ẩm cao. Thường làm tổ trong nhà, dưới sàn hoặc trong các khe nứt tường.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> **Tapinoma melanocephalum** có khả năng tiết ra một loại axit formic, một hợp chất hóa học có tính chất gây kích ứng. Chất này không gây hại nghiêm trọng nhưng có thể gây cảm giác nóng rát, đỏ da hoặc kích ứng nếu tiếp xúc trực tiếp. Điều này giúp chúng tự vệ khỏi kẻ săn mồi và có thể gây cảm giác khó chịu cho con người khi bị cắn.</p>
+                    <p><strong>Tác động:</strong> Mặc dù không gây hại nghiêm trọng về mặt sức khỏe, loài kiến này có thể gây phiền toái do sự xâm nhập vào nguồn thực phẩm và các khu vực trong nhà. Chúng cũng có thể tiết ra pheromone để dẫn dụ các thành viên khác đến khu vực có thức ăn hoặc khi bị đe dọa.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Giữ vệ sinh sạch sẽ, đặc biệt là trong các khu vực bếp, sử dụng bẫy mồi diệt kiến và bịt kín các khe hở nơi kiến có thể xâm nhập.</p>
+                </div>
+            </div>
+                            <div class="ant">
+                  <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.6435-9/203425310_336601058050533_7419587213039842979_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=rvDYHezzGigQ7kNvwHlxNBx&_nc_oc=AdmwRRxSRr_DWjukJfS2_7IN9cRACQ6I6-5nbjQiWqyIOXhvU38-XEW8oVNMN76nY3M6SPsETXhwoa_5NFbuLfgI&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=D-HJgJc4hNX-rmfaCPG7zA&oh=00_AfEx4nzeUGH3nwS197Yl_F0DjkqBaVx1QROz-Ps-4Rfagg&oe=6831A701" alt="Pseudolasius similus" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến nhăn (Pseudolasius similus)</h2>
+                    <p>Đây là một loài kiến nhỏ sống chủ yếu trong các khu rừng nhiệt đới Đông Nam Á, đặc biệt là trong các tầng lá mục hoặc thân cây mục rỗng. Loài này ít được biết đến rộng rãi do kích thước nhỏ và lối sống ẩn dật.</p>
+                    <p><strong>Đặc điểm:</strong> Cơ thể màu nâu nhạt đến vàng, dài khoảng 2–3 mm. Có mắt nhỏ, thân mềm và thường di chuyển chậm. Râu dài và chân mảnh giúp chúng cảm nhận môi trường tốt hơn trong bóng tối.</p>
+                    <p><strong>Tập tính:</strong> Thường sống theo đàn nhỏ, không có hành vi hung hăng. Là loài ăn tạp, chủ yếu tìm kiếm các mảnh vụn hữu cơ và nấm. Chúng cũng có thể nuôi rệp để lấy mật.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Pseudolasius similus có khả năng sống trong môi trường cực kỳ ẩm và kín đáo. Chúng có thể tạo tổ trong các mảng mục dưới đất hoặc trong khe hẹp của cây, thích nghi tốt với điều kiện thiếu sáng và ẩm thấp.</p>
+                    <p><strong>Tác động:</strong> Không gây hại đến con người hoặc cây trồng. Chúng giúp phân hủy chất hữu cơ và đóng vai trò trong chu trình sinh học của rừng nhiệt đới.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết do không gây hại. Thậm chí nên được bảo tồn như một phần quan trọng của hệ sinh thái rừng.</p>
+                  </div>
+                </div>
+
+            <div class="ant">
+                <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/278541299/original.jpeg" alt="Pheidole parva" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến đầu to (Pheidole parva)</h2>
+                    <p>Loài kiến nhỏ có lính đầu to, thường thấy ở các vùng nhiệt đới và cận nhiệt đới, bao gồm cả Việt Nam.</p>
+                    <p><strong>Đặc điểm:</strong> Có hai dạng thợ rõ rệt: thợ nhỏ (2 mm) và thợ lính đầu to (3–4 mm). Thân màu nâu sáng đến nâu đỏ. Thợ lính có đầu rất lớn, dùng để nghiền thức ăn cứng hoặc bảo vệ tổ.</p>
+                    <p><strong>Tập tính:</strong> Thường làm tổ trong đất, dưới đá hoặc các khe nứt nhỏ. Chúng hoạt động theo bầy đàn, rất tích cực trong việc tìm kiếm thức ăn và bảo vệ tổ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Loài này có **phân hóa đẳng cấp xã hội rất rõ ràng** giữa thợ và lính. Thợ lính có **hàm to khỏe**, không chỉ dùng để nghiền hạt hoặc phòng thủ, mà còn có thể **tiết ra chất pheromone để báo động** khi bị tấn công. Mặc dù không có nọc độc mạnh, nhưng nếu số lượng lớn, chúng có thể gây cảm giác khó chịu khi bị cắn.</p>
+                    <p><strong>Tác động:</strong> Không gây nguy hiểm cho con người nhưng có thể là mối phiền toái nếu làm tổ gần nhà hoặc công trình. Chúng có thể xâm nhập vào thực phẩm, đặc biệt là thức ăn ngọt và dầu mỡ.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Vệ sinh khu vực xung quanh nhà, tránh để thức ăn ngoài trời lâu, sử dụng mồi diệt kiến dạng gel hoặc hạt, và kiểm tra các khe nứt nơi kiến có thể làm tổ.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://static.inaturalist.org/photos/72323413/medium.jpg" alt="Solenopsis daguerrei" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến đỏ Nam Mỹ (Solenopsis daguerrei)</h2>
+                    <p>Loài kiến này được tìm thấy chủ yếu ở Nam Mỹ. Chúng có màu sắc đỏ đậm và thường xuyên làm tổ trong khu vực đất ẩm. Đây là loài kiến thích nghi tốt với môi trường nhiệt đới và nhiệt độ ấm áp.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến trưởng thành dài từ 3–5 mm, màu đỏ, có cơ thể hình trụ và một đầu lớn với hàm khỏe. Chúng có khả năng săn mồi rất giỏi và có thể di chuyển rất nhanh.</p>
+                    <p><strong>Tập tính:</strong> Solenopsis daguerrei làm tổ trong đất ẩm hoặc dưới các vật thể mục nát, thường sống theo đàn và có tổ chức xã hội rất chặt chẽ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Loài này có nọc độc có thể gây cảm giác đau và phản ứng dị ứng cho người khi bị chích. Tuy nhiên, chúng không tấn công người nếu không bị làm phiền.</p>
+                    <p><strong>Tác động:</strong> Đây là loài kiến không gây nhiều tác hại lớn cho con người, nhưng có thể gây phiền toái khi xâm nhập vào nhà cửa hoặc khu vực sinh hoạt.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Dùng thuốc diệt kiến hoặc bẫy mồi để kiểm soát sự xâm lấn của chúng trong khu vực nhà ở hoặc khu vườn.</p>
+                </div>
+            </div>
+                            <div class="ant">
+                  <img src="data:image/jpeg;base64,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" alt="Camponotus inflatus" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến mật (Camponotus inflatus)</h2>
+                    <p>Camponotus inflatus là một trong những loài kiến được gọi là kiến mật (honeypot ants). Loài này nổi tiếng nhờ khả năng một số cá thể có thể phình to bụng để dự trữ mật cho cả tổ, giống như "bình chứa sống".</p>
+                    <p><strong>Đặc điểm:</strong> Kích thước khoảng 6–12 mm. Một số cá thể đặc biệt (gọi là repletes) có bụng phình to như trái nho khi chứa đầy mật. Cơ thể màu vàng nâu đến cam đậm.</p>
+                    <p><strong>Tập tính:</strong> Sống trong hang đất ở các vùng bán hoang mạc và hoang mạc, như tại Úc và châu Mỹ. Các cá thể dự trữ mật được treo lơ lửng trong tổ và "nôn" mật ra để nuôi các kiến khác khi nguồn thức ăn khan hiếm.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Có thể lưu trữ lượng lớn mật trong cơ thể để chia sẻ khi cần thiết. Đây là một hình thức “dự trữ năng lượng sống” cực kỳ hiếm trong thế giới côn trùng.</p>
+                    <p><strong>Tác động:</strong> Không gây hại cho con người, nhưng có vai trò sinh thái lớn trong việc duy trì tổ chức xã hội và cân bằng sinh thái ở các vùng khô cằn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết và không nên kiểm soát vì chúng là loài không gây hại và có giá trị sinh học cao.</p>
+                  </div>
+                </div>
+                <div class="ant">
+                  <img src="https://www.joelsartore.com/wp-content/uploads/stock/INS013/INS013-00053-1920x1282.jpg" alt="Myrmecocystus mexicanus" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến mật Mexico (Myrmecocystus mexicanus)</h2>
+                    <p>Myrmecocystus mexicanus là một loài kiến thuộc chi Myrmecocystus, nổi tiếng với các cá thể kiến mật được gọi là "repletes". Loài này sinh sống tại các vùng khô hạn của Bắc Mỹ, đặc biệt là ở sa mạc và vùng đồng cỏ cao.</p>
+                    <p><strong>Đặc điểm:</strong> Kích thước từ 5–7 mm đối với cá thể thường, còn các cá thể hũ mật có thể có bụng phình to đến gần 1 cm. Màu sắc từ nâu nhạt đến nâu sẫm, chân dài và râu mảnh.</p>
+                    <p><strong>Tập tính:</strong> Tổ thường nằm sâu dưới đất với các khoang lớn để treo những cá thể hũ mật. Kiến thợ sẽ đi kiếm mật và mang về cho repletes lưu trữ bằng cách truyền miệng.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Repletes có thể lưu trữ mật hoặc dịch từ côn trùng khác trong bụng, sau đó tiết ra nuôi các cá thể trong tổ vào mùa khô hạn – là ví dụ sinh học điển hình của chiến lược sinh tồn cực đoan.</p>
+                    <p><strong>Tác động:</strong> Không gây hại đến con người hoặc cây trồng. Là loài quan trọng trong việc tái phân phối năng lượng trong hệ sinh thái khô hạn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần kiểm soát. Loài này có giá trị nghiên cứu sinh thái và sinh lý học cao.</p>
+                  </div>
+                </div>
+                <div class="ant">
+                  <img src="https://theantvault.com/cdn/shop/files/8AC83DEE-06B2-41C6-B961-11CA0DDB5219_05142957-68eb-4348-a4c1-18b874546d60.jpg?v=1689195480" alt="Myrmecocystus mimicus" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến mật Mimic (Myrmecocystus mimicus)</h2>
+                    <p>Myrmecocystus mimicus là loài kiến đặc trưng của các vùng sa mạc ở Tây Nam Hoa Kỳ. Nó là một phần của nhóm kiến mật, nơi một số cá thể lưu trữ mật để nuôi dưỡng cả tổ trong thời kỳ khô hạn.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến thợ dài khoảng 5–8 mm, thân màu nâu đỏ nhạt. Các cá thể “repletes” (kiến hũ mật) có bụng lớn, bóng loáng khi đầy mật. Râu dài, thân thanh mảnh.</p>
+                    <p><strong>Tập tính:</strong> Sống thành đàn trong các tổ dưới lòng đất, thường có cấu trúc phức tạp. Ra ngoài kiếm ăn vào buổi sáng sớm hoặc chiều tối để tránh nhiệt độ cao, thường hút mật hoa và dịch từ côn trùng khác.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Giống các loài Myrmecocystus khác, loài này có khả năng dự trữ mật và chất ngọt trong bụng phình to để nuôi cả tổ vào mùa khô. Đây là một ví dụ tuyệt vời về sự thích nghi với môi trường khắc nghiệt.</p>
+                    <p><strong>Tác động:</strong> Không gây hại đến con người hay cây trồng. Là loài có giá trị sinh học cao, góp phần vào cân bằng sinh thái ở các vùng khô cằn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Thậm chí cần được bảo tồn để duy trì sự đa dạng sinh học và nghiên cứu sinh thái.</p>
+                  </div>
+                </div>
+
+            <div class="ant">
+                <img src="https://static.wixstatic.com/media/d392ea_682506020d334d01aff4ecc81f05c4f7~mv2.jpg/v1/fill/w_520,h_346,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/d392ea_682506020d334d01aff4ecc81f05c4f7~mv2.jpg" alt="Pheidole pallidula" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến nâu châu Âu (Pheidole pallidula)</h2>
+                    <p>Loài kiến có tổ chức xã hội cao với lính và thợ riêng biệt, thường xuất hiện ở các vùng khí hậu ấm áp.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến nhỏ, thợ dài khoảng 2–3 mm, lính to hơn với đầu lớn, màu vàng nhạt đến nâu đỏ. Lính có đầu to đặc trưng, giống các loài Pheidole khác.</p>
+                    <p><strong>Tập tính:</strong> Làm tổ dưới đất, trong cỏ hoặc trong các khe gạch đá. Di chuyển thành hàng rõ rệt khi kiếm ăn. Có thể xâm nhập vào nhà để tìm thức ăn, đặc biệt là chất ngọt và dầu mỡ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Loài này có khả năng **thích nghi xã hội cao**, điều chỉnh số lượng lính và thợ linh hoạt tùy vào điều kiện môi trường. Ngoài ra, lính của P. pallidula cũng có thể **tiết ra chất pheromone cảnh báo và tập hợp**, giúp tổ phản ứng nhanh khi bị đe dọa. Mặc dù không cắn đau hay có độc, chúng có thể gây phiền toái lớn nếu làm tổ gần nhà.</p>
+                    <p><strong>Tác động:</strong> Có thể làm phiền trong sinh hoạt do số lượng đông và thói quen xâm nhập vào khu vực sinh sống. Tuy nhiên, không mang mầm bệnh nghiêm trọng.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Dọn sạch thức ăn thừa, đặc biệt là đồ ngọt; bịt kín các khe nứt; dùng mồi bả hoặc thuốc diệt kiến sinh học an toàn trong nhà.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://desinsectador.com/wp-content/uploads/2021/06/paratrechina-longicornis-barcelona-11-2020.jpg" alt="Paratrechina longicornis" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến đen điên (Paratrechina longicornis)</h2>
+                    <p>Thường được gọi là "kiến điên" (*crazy ant*) do chuyển động hỗn loạn, nhanh nhẹn và không theo đường thẳng khi kiếm ăn.</p>
+                    <p><strong>Đặc điểm:</strong> Cơ thể mảnh, dài 2.5–3 mm, màu nâu đen bóng. Râu và chân rất dài, giúp chúng di chuyển cực nhanh trên mọi địa hình.</p>
+                    <p><strong>Tập tính:</strong> Là loài kiến xâm lấn, làm tổ ở nhiều nơi như nhà ở, công trình, khe đá, cây mục, thậm chí thiết bị điện tử. Rất thích nghi với môi trường đô thị.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Có tốc độ di chuyển cực nhanh và hỗn loạn. Chúng sử dụng pheromone để định hướng và dẫn đường cho đàn kiến. Khi gặp nguy hiểm, cả đàn có thể phân tán với tốc độ cao và rất khó kiểm soát. Đặc biệt, kiến điên không tấn công mạnh như loài kiến lửa, nhưng có thể làm hỏng thiết bị điện tử do làm tổ bên trong và gây chập mạch.</p>
+                    <p><strong>Tác động:</strong> Không gây hại sức khỏe trực tiếp nhưng gây phiền toái và có thể ảnh hưởng đến thiết bị điện, máy móc, do thói quen làm tổ ở nơi kín ẩm và có dòng điện.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Hạn chế khu vực ẩm thấp, bịt các khe hở, sử dụng bẫy mồi và thuốc dạng gel. Cần kiểm tra cả thiết bị điện nếu nghi ngờ kiến làm tổ bên trong.</p>
+                </div>
+            </div>
+                            <div class="ant">
+                  <img src="https://www.shutterstock.com/image-photo/myrmecocystus-navajo-yellow-honey-pot-260nw-2366006875.jpg" alt="Myrmecocystus navajo" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến mật Navajo (Myrmecocystus navajo)</h2>
+                    <p>Myrmecocystus navajo là một loài kiến thuộc nhóm kiến mật, được đặt tên theo vùng sinh sống của nó – lãnh thổ người Navajo tại các bang như Arizona, New Mexico và Utah (Hoa Kỳ). Loài này là một phần quan trọng của hệ sinh thái sa mạc nơi nó cư trú.</p>
+                    <p><strong>Đặc điểm:</strong> Kích thước khoảng 6–9 mm. Cơ thể màu vàng đến nâu sáng. Các cá thể hũ mật (repletes) có bụng căng tròn khi tích trữ mật, giúp tổ sống sót qua thời kỳ hạn hán.</p>
+                    <p><strong>Tập tính:</strong> Tổ thường nằm sâu dưới đất, với cấu trúc ngăn tầng để chứa các cá thể lưu trữ mật. Loài này kiếm ăn về đêm hoặc vào lúc sáng sớm để tránh nhiệt độ cao.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Repletes có thể lưu trữ mật hoa, dịch ngọt từ côn trùng khác, và chất dinh dưỡng cho tổ. Khi cần thiết, các cá thể khác sẽ "ăn" từ những cá thể này bằng cách kích thích chúng tiết mật.</p>
+                    <p><strong>Tác động:</strong> Không gây hại cho người. Có vai trò sinh thái quan trọng, hỗ trợ tái phân bố chất dinh dưỡng và thích nghi hoàn hảo với môi trường khô cằn khắc nghiệt.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Là loài hữu ích trong nghiên cứu về thích nghi sinh học và nên được bảo vệ.</p>
+                  </div>
+                </div>
+
+            <div class="ant">
+                <img src="https://static.inaturalist.org/photos/61544935/large.jpg" alt="Tapinoma sessile" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến dừa (Tapinoma sessile)</h2>
+                    <p>Loài kiến phổ biến trong nhà ở Bắc Mỹ, được biết đến với biệt danh “kiến mùi dừa” vì mùi hương phát ra khi bị nghiền nát.</p>
+                    <p><strong>Đặc điểm:</strong> Dài khoảng 2.5–3.5 mm, màu nâu đến đen. Thân có hình dáng hơi cong, mảnh mai và không có ngạnh (spines) trên ngực. Khi bị nghiền, phát ra mùi giống mùi dừa thối hoặc hương hóa học ngọt.</p>
+                    <p><strong>Tập tính:</strong> Là loài kiến siêu đàn (supercolony), có nhiều tổ với nhiều con chúa. Làm tổ trong tường, dưới sàn, sau bếp hoặc gần nguồn nước. Hoạt động tích cực quanh năm, đặc biệt trong nhà.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Khi bị tổn thương, loài này tiết ra **mùi hóa học đặc trưng** giống dừa hỏng – một phản ứng tự vệ và cũng là đặc điểm nhận diện. Ngoài ra, khả năng **đa chúa – đa tổ** giúp chúng tồn tại bền vững và lan rộng nhanh chóng, rất khó kiểm soát bằng phương pháp truyền thống.</p>
+                    <p><strong>Tác động:</strong> Không có độc, không gây bệnh, nhưng có thể gây phiền toái do làm tổ trong nhà và xâm nhập nguồn thực phẩm. Khả năng lan rộng và sống lâu khiến việc kiểm soát khó khăn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Vệ sinh kỹ nhà cửa, bịt kín các khe nứt, loại bỏ nguồn nước ẩm và sử dụng bẫy mồi. Phương pháp diệt đơn lẻ không hiệu quả – cần xử lý đồng thời nhiều điểm tổ.</p>
+                </div>
+            </div>
+                            <div class="ant">
+                  <img src="https://www.antstore.net/shop/images/product_images/original_images/myrmecocystus_mendax2.jpg" alt="Myrmecocystus mendax" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến mật giả dối (Myrmecocystus mendax)</h2>
+                    <p>Myrmecocystus mendax là một loài kiến đặc hữu của các sa mạc phía Tây Hoa Kỳ. Tên gọi "mendax" có thể ám chỉ bản tính lẩn tránh hoặc khó phát hiện của chúng trong tự nhiên. Giống các loài trong chi của mình, chúng có các cá thể kiến mật giúp tổ sống sót qua điều kiện khắc nghiệt.</p>
+                    <p><strong>Đặc điểm:</strong> Dài khoảng 5–8 mm. Thân có màu nâu đỏ đến nâu sẫm, phần bụng có thể phình to ở các cá thể lưu trữ mật (repletes). Đầu khá lớn, râu dài và chân mảnh.</p>
+                    <p><strong>Tập tính:</strong> Kiến thợ ra ngoài kiếm thức ăn như mật hoa, dịch tiết từ côn trùng hoặc chất hữu cơ. Chúng có thể hoạt động cả ngày lẫn đêm tùy theo điều kiện thời tiết. Tổ sâu và phức tạp với khoang chuyên biệt cho repletes.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Repletes dự trữ chất ngọt trong bụng phình lớn, có thể chia sẻ lại cho các cá thể khác trong thời gian thiếu hụt. Đây là một trong những chiến lược sinh tồn hiệu quả ở môi trường sa mạc.</p>
+                    <p><strong>Tác động:</strong> Không gây hại cho con người. Là loài có giá trị sinh thái và khoa học cao, giúp nghiên cứu về cơ chế thích nghi trong môi trường khô cằn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Là loài trung lập hoặc có lợi, nên được bảo vệ trong tự nhiên.</p>
+                  </div>
+                </div>
+
+            <div class="ant">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScYTnJfSFFKsZiW0ip8_3jnCSzkJV7voWMiw&s" alt="Solenopsis geminata" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến lửa châu Mỹ (Solenopsis geminata)</h2>
+                    <p>Được gọi là "kiến lửa nhỏ", loài này có nhiều điểm tương đồng với Solenopsis invicta, nhưng kích thước nhỏ hơn và ít nguy hiểm hơn về mặt nọc độc. Tuy nhiên, chúng vẫn có thể gây đau đớn khi bị chích.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến lửa nhỏ dài khoảng 2–5 mm, màu đỏ nâu. Chúng có hình dáng mảnh mai, cơ thể bóng và di chuyển nhanh chóng. Cánh của chúng rất ngắn, thường chỉ có ở những con có khả năng sinh sản.</p>
+                    <p><strong>Tập tính:</strong> Là loài kiến xâm lấn, Solenopsis geminata thường được tìm thấy trong các khu vực ấm áp như sân vườn, khu vực nông thôn và thậm chí trong các tòa nhà. Chúng thường làm tổ dưới đất hoặc trong các vật thể mục nát.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Loài kiến này có **tập tính xã hội rất phát triển** với hệ thống tổ chức phân chia công việc rõ ràng giữa thợ và lính. Khi cảm thấy bị đe dọa, chúng có thể **tấn công đồng loạt** và chích nhiều lần, gây cảm giác đau đớn và khó chịu. Mặc dù nọc độc không nguy hiểm như loài Solenopsis invicta, nhưng vẫn có thể gây ra **phản ứng dị ứng nhẹ** đối với những người nhạy cảm.</p>
+                    <p><strong>Tác động:</strong> Là loài xâm lấn có thể gây phiền toái cho con người do chúng thường xuyên xâm nhập vào nhà hoặc khu vực sinh hoạt. Kiến lửa nhỏ cũng có thể cạnh tranh với các loài kiến khác và tàn phá mùa màng trong nông nghiệp.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Các biện pháp kiểm soát tương tự như với Solenopsis invicta: kiểm tra thường xuyên các khu vực tổ, sử dụng thuốc diệt kiến hoặc mồi bả, và làm sạch các khu vực dễ phát sinh tổ kiến. Cần chú ý đến việc bịt kín các khe hở để ngăn chặn sự xâm nhập vào nhà.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Red_Weaver_Ant%2C_Oecophylla_smaragdina.jpg/500px-Red_Weaver_Ant%2C_Oecophylla_smaragdina.jpg" alt="Oecophylla smaragdina" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến vàng (Oecophylla smaragdina)</h2>
+                    <p>Được gọi là "kiến vàng", là một trong những loài kiến nổi tiếng nhờ vào kỹ năng xây tổ cực kỳ độc đáo bằng cách kết nối lá cây với nhau bằng sợi tơ từ tuyến nước bọt của chúng. Loài kiến này sống chủ yếu ở các khu vực nhiệt đới và cận nhiệt đới.</p>
+                    <p><strong>Đặc điểm:</strong> Kiến vàng có kích thước trung bình từ 5–8 mm, màu vàng nhạt đến nâu vàng. Đặc biệt, chúng có cơ thể dài và dáng mảnh, với đôi mắt lớn và khả năng di chuyển rất nhanh nhẹn trên các cành cây.</p>
+                    <p><strong>Tập tính:</strong> Oecophylla smaragdina sống theo đàn lớn, thường xuyên xây tổ trên cây, đặc biệt là cây ăn quả, trong rừng nhiệt đới. Tổ của chúng được xây dựng từ nhiều lá cây, kết nối bằng tơ do kiến tiết ra. Loài này rất hiếu chiến và có thể tấn công kẻ xâm nhập khi có sự đe dọa đến tổ của chúng.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Kiến vàng có một kỹ năng độc đáo trong việc xây tổ từ các lá cây. Chúng sử dụng **tơ nước bọt** để kết dính các lá lại với nhau, tạo thành một tổ có hình dạng phức tạp và vững chắc. Chúng cũng có khả năng tấn công tập thể rất mạnh mẽ và nhanh chóng khi bảo vệ tổ.</p>
+                    <p><strong>Tác động:</strong> Loài này không nguy hiểm trực tiếp đến con người nhưng có thể gây khó chịu khi tấn công hoặc bảo vệ tổ. Những con kiến này có thể cắn mạnh và tạo ra cảm giác đau nhức. Bên cạnh đó, chúng còn giúp kiểm soát một số loài côn trùng gây hại nhờ vào khả năng săn mồi giỏi.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Kiểm soát loài này có thể khá khó khăn vì chúng thường làm tổ trên cây và di chuyển nhanh chóng. Để kiểm soát, cần phải tìm và tiêu diệt tổ bằng cách sử dụng các biện pháp hóa học hoặc can thiệp thủ công khi có thể. Tránh làm hại các khu vực cây cối nơi chúng sinh sống nếu không có nhu cầu thiết yếu.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyC_z-aAg0Y2GRaJspz_Px-9Y6Z-4XQQKykg&s" alt="Adetomyrma venatrix" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến Dracula (Adetomyrma venatrix)</h2>
+                    <p>Adetomyrma venatrix, còn được gọi là "kiến ma cà rồng", là một loài kiến cực kỳ hiếm chỉ tìm thấy ở Madagascar. Tên gọi của nó bắt nguồn từ tập tính đặc biệt: kiến trưởng thành sẽ hút chất lỏng từ ấu trùng cùng loài để sống – một hành vi độc đáo trong thế giới côn trùng.</p>
+                    <p><strong>Đặc điểm:</strong> Loài này có kích thước nhỏ (dưới 5 mm), thân màu vàng cam nhạt. Mắt rất nhỏ hoặc gần như không có, vì chúng thường sống trong môi trường tối như dưới đất hoặc trong các khúc gỗ mục.</p>
+                    <p><strong>Tập tính:</strong> Adetomyrma venatrix sống theo bầy nhỏ, có tổ chức xã hội đơn giản hơn nhiều so với các loài kiến khác. Chúng hiếm khi được nhìn thấy vì sống trong các hệ sinh thái ẩm thấp và hầu như không rời khỏi tổ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Kiến trưởng thành không tìm kiếm thức ăn như các loài khác. Thay vào đó, chúng hút chất dinh dưỡng từ cơ thể của ấu trùng (gọi là hành vi *trophallaxis bằng miệng ngược*), giống như "hút máu" nhưng không giết chết ấu trùng. Đây là lý do khiến chúng có biệt danh là "kiến ma cà rồng".</p>
+                    <p><strong>Tác động:</strong> Không gây hại đến con người. Chúng là một phần quan trọng trong hệ sinh thái địa phương, giúp phân hủy các vật liệu hữu cơ và duy trì cân bằng sinh thái trong môi trường sinh sống tự nhiên ở Madagascar.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Đây là loài kiến hiếm, không gây hại cho con người hoặc nông nghiệp. Trong thực tế, bảo tồn loài này là điều được khuyến khích do nguy cơ tuyệt chủng cao từ mất môi trường sống.</p>
+                </div>
+            </div>
+                               <div class="ant">
+                  <img src="https://insectessociaux.com/wp-content/uploads/2018/02/bagoti1.jpg" alt="Melophorus bagoti" onclick="openLightbox(this.src)">
+                  <div class="ant-info">
+                    <h2>Kiến tốc hành sa mạc (Melophorus bagoti)</h2>
+                    <p>Melophorus bagoti là một loài kiến sinh sống trong những vùng sa mạc nóng bức của nước Úc. Nó nổi tiếng với khả năng di chuyển cực nhanh trên cát nóng, là một trong những loài kiến nhiệt đới có sức chịu đựng nhiệt cao nhất thế giới, cũng có hành vi tích mật giống kiến mật.</p>
+                    <p><strong>Đặc điểm:</strong> Dài khoảng 5–7 mm, cơ thể màu nâu đỏ hoặc cam sẫm, chân dài. Mắt lớn giúp định hướng dưới ánh sáng chói chang của mặt trời sa mạc.</p>
+                    <p><strong>Tập tính:</strong> Kiến thợ hoạt động chủ yếu vào những thời điểm nóng nhất trong ngày – khi kẻ thù ít xuất hiện. Chúng có khả năng định vị nhờ ánh sáng mặt trời và dấu vết pheromone.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Là một trong số ít loài có thể hoạt động trong điều kiện nhiệt độ bề mặt lên đến 70°C. Cơ thể của chúng thích nghi để chống mất nước và di chuyển nhanh trên cát nóng bỏng.</p>
+                    <p><strong>Tác động:</strong> Không gây hại đến con người. Là một mắt xích quan trọng trong hệ sinh thái sa mạc, giúp dọn sạch xác côn trùng và phân giải vật chất hữu cơ.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Là loài bản địa thích nghi cực tốt với môi trường khắc nghiệt và có ý nghĩa nghiên cứu sinh học lớn.</p>
+                  </div>
+                </div>
+
+            <div class="ant">
+                <img src="https://bugguide.net/images/cache/ZL8/ZSL/ZL8ZSLGZ4LBHNHLR8HZRWHOH7HAHZL2ZSL2Z4L1ZUHWZ8LVZKLCH4HRRUHCHKLVZUHHR4HGZMHCHIHCHLLAH4H4ZQLTH.jpg" alt="Kiến hoa" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến hoa (Monomorium floricola)</h2>
+                    <p>Loài kiến rất nhỏ, thường sống trong nhà và các công trình nhân tạo.</p>
+                    <p><strong>Đặc điểm:</strong> Cơ thể nhỏ, màu nâu đến nâu đen, dài khoảng 1.5 - 2 mm.</p>
+                    <p><strong>Tập tính:</strong> Sống theo đàn lớn, thích nghi tốt trong môi trường ấm và ẩm. Là loài kiến không cắn nhưng rất khó kiểm soát do khả năng di chuyển và phát tán mạnh.</p>
+                    <p><strong>Tác động:</strong> Thường gây phiền toái trong nhà dân và cơ sở thương mại do di chuyển trên thực phẩm, thiết bị và các vật dụng khác.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Làm sạch kỹ các khu vực có thức ăn, sử dụng bẫy mồi chuyên dụng và kiểm tra kỹ lưỡng các khe nứt và điểm xâm nhập.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://genk.mediacdn.vn/139269124445442048/2023/1/12/35723149275ac13f25437k-1673489545336980986600-1673491927852-16734919285211928170799.jpg" alt="Paraponera clavata" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến đạn (Paraponera clavata)</h2>
+                    <p>Paraponera clavata, thường được gọi là "kiến búa" (bullet ant), nổi tiếng là loài kiến có vết chích đau nhất trên thế giới. Nọc độc của chúng gây ra cơn đau dữ dội và kéo dài, và là một trong những loài gây tai nạn nọc độc nguy hiểm nhất cho con người trong tự nhiên.</p>
+                    <p><strong>Đặc điểm:</strong> Paraponera clavata là loài kiến có kích thước lớn, dài từ 18–25 mm, với màu sắc chủ yếu là đen, đôi khi có màu đỏ cam ở bụng. Đầu của chúng rất lớn so với cơ thể, hàm của chúng rất mạnh mẽ, và đôi chân dài giúp chúng di chuyển nhanh chóng trong rừng nhiệt đới.</p>
+                    <p><strong>Tập tính:</strong> Loài này sống trong các khu rừng nhiệt đới của Nam Mỹ, đặc biệt là ở các vùng đất ẩm ướt. Chúng làm tổ trong các hốc cây lớn hoặc dưới các vật thể mục nát. Paraponera clavata sống theo đàn, với một cấu trúc xã hội chặt chẽ, nơi mỗi con có nhiệm vụ riêng biệt như tìm kiếm thức ăn và bảo vệ tổ.</p>
+                    <p><strong>Khả năng đặc biệt:</strong> Kiến búa nổi tiếng với nọc độc mạnh, khi bị chích sẽ gây ra cơn đau như bị bắn vào tay hoặc chân, kéo dài từ 5–10 phút. Tuy nhiên, mặc dù đau đớn, vết chích của chúng hiếm khi gây chết người. Các nhà nghiên cứu thậm chí đã mô tả cảm giác đau này là "cơn đau tuyệt vọng" vì cường độ mạnh mẽ của nó.</p>
+                    <p><strong>Tác động:</strong> Paraponera clavata là một loài kiến rất mạnh mẽ và có khả năng gây hại lớn nếu xâm nhập vào khu vực sinh sống của con người. Tuy nhiên, chúng không tấn công trừ khi bị khiêu khích. Mặc dù nọc độc của chúng gây đau đớn, chúng không phải là mối đe dọa lớn đối với con người, vì sự tiếp xúc chủ yếu xảy ra trong tự nhiên.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Để tránh bị chích, cần hạn chế tiếp xúc với loài này trong tự nhiên. Nếu không may bị chích, cần rửa sạch vết thương và áp dụng thuốc giảm đau để giảm bớt cơn đau. Các biện pháp kiểm soát chủ yếu là tránh xâm nhập vào khu vực sinh sống của chúng và không làm phiền tổ của chúng.</p>
+                </div>
+            </div>
+            
+            <div class="ant">
+                <img src="https://static.wixstatic.com/media/7e8bb1_e5ca4c9f11e3416f864ddc6ce97bd748~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg" alt="Camponotus floridanus" onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                    <h2>Kiến thợ mộc florida (Camponotus floridanus)</h2>
+                    <p>Loài kiến thợ mộc lớn, thường thấy ở vùng Đông Nam Hoa Kỳ, đặc biệt là bang Florida.</p>
+                    <p><strong>Đặc điểm:</strong> Kích thước lớn (6–12 mm), màu nâu đỏ với phần bụng đen. Có thể phân biệt rõ ràng giữa các cá thể thợ lớn và thợ nhỏ trong tổ.</p>
+                    <p><strong>Tập tính:</strong> Làm tổ trong gỗ mục, thân cây, hoặc cấu trúc gỗ của các công trình. Không ăn gỗ như mối, nhưng gây hại bằng cách khoét rỗng cấu trúc để làm tổ.</p>
+                    <p><strong>Tác động:</strong> Có thể gây hư hại nhà cửa nếu làm tổ trong cấu trúc gỗ. Là loài phổ biến trong sinh thái đô thị và nông thôn.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Loại bỏ gỗ mục quanh nhà, đảm bảo thông gió tốt để gỗ không ẩm, sử dụng mồi hoặc thuốc xịt diệt kiến thợ mộc chuyên dụng.</p>
+                </div>
+            </div>
+            <div class="ant">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcUbKTnKax66vcv4LsRPN1twYIjkKeNR2PJw&s" alt="Kiến Pharaoh">
+                <div class="ant-info">
+                    <h2>Kiến Pharaoh (Monomorium pharaonis)</h2>
+                    <p>Loài kiến nhỏ bé, hay làm tổ trong nhà, khó kiểm soát do sinh sản nhanh.</p>
+                    <p><strong>Đặc điểm:</strong> Màu vàng nhạt đến nâu nhạt, kích thước rất nhỏ (khoảng 2 mm).</p>
+                    <p><strong>Tập tính:</strong> Thường làm tổ trong các khe nứt tường, thiết bị điện, và nơi có nhiệt độ ổn định như bệnh viện, nhà hàng.</p>
+                    <p><strong>Tác động:</strong> Có thể lây lan vi khuẩn, gây ô nhiễm thực phẩm và ảnh hưởng đến sức khỏe, đặc biệt là trong môi trường y tế.</p>
+                    <p><strong>Biện pháp kiểm soát:</strong> Sử dụng bẫy mồi chuyên dụng cho kiến Pharaoh, vệ sinh khu vực thường xuyên, bịt kín các khe nứt và lỗ hổng.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const antList = document.getElementById('antList');
+        const ants = antList.getElementsByClassName('ant');
+
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            for (let i = 0; i < ants.length; i++) {
+                const ant = ants[i];
+                const text = ant.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    ant.style.display = 'flex';
+                } else {
+                    ant.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    <a href="index.html" class="back-button">⬅</a>
+</body>
+</html>

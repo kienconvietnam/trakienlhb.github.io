@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ - Tra Cứu Kiến</title>
+
+  <style>
+    :root {
+      --main-color: #236A61;
+      --accent-color: #4CAF50;
+      --text-color: #ffffff;
+      --bg-overlay: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Reset cơ bản */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231031/pngtree-stunning-dark-blue-fern-leaves-a-creative-wallpaper-for-mobile-phones-image_13738491.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Overlay để dễ đọc hơn */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--bg-overlay);
+      z-index: -1;
+    }
+
+    /* === MENU === */
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--main-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    /* Menu icon cho điện thoại */
+    .menu-icon {
+      font-size: 30px;
+      color: var(--text-color);
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Menu navigation */
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      transition: background 0.3s;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: var(--accent-color);
+    }
+
+    /* === PHẦN CHÍNH === */
+    .content {
+      margin-top: 80px;
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Tiêu đề */
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    .content h4 {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: bounce 2s infinite;
+      color: #ddd;
+    }
+
+    /* === HÌNH ẢNH KIẾN === */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .fade-image {
+      width: 180px;
+      border-radius: 12px;
+      animation: bounce 2s infinite;
+    }
+
+    /* === ANIMATION === */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* === NÚT TRA CỨU === */
+    .button-link {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 14px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 20px; /* Đảm bảo nút có không gian xung quanh */
+    }
+
+    .button-link:hover {
+      background: #45a049;
+      transform: translateY(-5px);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+      }
+
+      /* Khi menu toggle được bật */
+      #menu-toggle:checked + nav ul {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: var(--main-color);
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Hiển thị menu icon khi ở màn hình nhỏ */
+      .menu-icon {
+        display: block;
+      }
+
+      nav ul li {
+        margin: 20px 0;
+      }
+
+      nav ul li a {
+        padding: 14px 20px;
+        font-size: 1.2rem;
+      }
+    }
+    /* Hiển thị menu khi checkbox được tick */
+#menu-toggle:checked + nav ul {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: var(--main-color);
+  width: 100%;
+  text-align: center;
+}
+
+#menu-toggle:checked + nav ul li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateX(-100px); /* Bắt đầu từ ngoài màn hình */
+  animation: slideIn 0.6s forwards;
+}
+
+#menu-toggle:checked + nav ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+#menu-toggle:checked + nav ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+#menu-toggle:checked + nav ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Bắt đầu từ ngoài màn hình */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Về vị trí ban đầu */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <div class="menu-container">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <nav>
+      <ul>
+        <li><a href="about2.html">Để lại ý kiến</a></li>
+        <li><a href="#videos">Video</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- PHẦN NỘI DUNG -->
+  <div class="content">
+    <h1>Chào Mừng!</h1>
+    <h4><i>Tự nhiên bắt đầu từ những điều nhỏ bé nhất - những chú kiến chăm chỉ</i></h4>
+
+    <div class="image-gallery">
+      <img src="https://file.qdnd.vn/data/images/0/2020/08/04/huuduong_tv/03.png?dpi=150&quality=100&w=575" class="fade-image" alt="Ảnh kiến 1">
+      <img src="https://shynhhouse.com/wp-content/uploads/2022/10/kien-can-1.jpg" class="fade-image" alt="Ảnh kiến 2">
+    </div>
+
+    <a href="about.html" class="button-link">Tra Cứu Các Loài Kiến</a>
+  </div>
+
+</body>
+</html>
