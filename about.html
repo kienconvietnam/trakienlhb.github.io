@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tra Cứu Các Loài Kiến</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             background-color: hsl(0, 0%, 100%);
@@ -147,6 +148,38 @@ a {
     height: auto; /* tự điều chỉnh chiều cao theo tỷ lệ */
     border-radius: 8px;
     cursor: pointer;
+}
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Áp dụng hiệu ứng cho các phần tử .ant */
+.ant {
+  animation: fadeIn 1s ease-out forwards;
+}
+/* Hiệu ứng xuất hiện mờ dần */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Di chuyển lên từ phía dưới */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Áp dụng hiệu ứng cho hộp tra cứu */
+.container {
+  animation: fadeIn 1s ease-out forwards;
 }
 
     </style>
@@ -484,6 +517,25 @@ a {
             });
         });
     </script>
+<script>
+    window.addEventListener("scroll", function() {
+        const ants = document.querySelectorAll('.ant');
+        ants.forEach(function(ant) {
+            const rect = ant.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                ant.style.display = 'flex'; // Hiển thị phần tử khi vào màn hình
+            }
+        });
+    });
+</script>
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.querySelector('.container').style.display = 'block';
+            document.querySelector('.container').classList.add('fadeIn');
+        }, 2000); // Chờ 2 giây rồi mới xuất hiện
+    };
+</script>
 
     <a href="index.html" class="back-button">⬅</a>
     
