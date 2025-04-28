@@ -42,22 +42,16 @@
             padding: 10px;
             border-bottom: 1px solid #000000;
         }
-        .ant img {
-            width: 100px;
-            height: auto;
-            margin-right: 15px;
-            border-radius: 5px;
-        }
 
 a {
       position: fixed;
       top: 40px;
       left: 1,5px;
       z-index: 999;
-      font-size: 18px;
+      font-size: 20px;
       color: white;
       text-decoration: none;
-      padding: 1px 1px;
+      padding: 5px 7px;
       background-color: #007bff;
       border-radius: 5px;
       font-weight: bold;
@@ -82,19 +76,11 @@ a {
       align-items: flex-start;
     }
 
-    .ant img {
-      width: 250px;
-      height: auto;
-      border-radius: 8px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
     .ant-info {
       flex: 1;
       min-width: 0;
     }
-
+    
     @media (max-width: 768px) {
       .ant {
         flex-direction: column;
@@ -111,6 +97,58 @@ a {
         padding: 0 12px;
       }
     }
+    body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(255, 0, 0);
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 92%;
+            padding: 15px;
+            margin-top: 9px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #000000;
+        }
+        .ant {
+            display: none; /* Ẩn toàn bộ loài kiến khi vào trang */
+            align-items: flex-start;
+            padding: 10px;
+            border-bottom: 1px solid #000000;
+        }
+        .ant img {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .ant-info {
+            flex-grow: 1;
+        }
+        .ant-info p {
+            margin: 5px 0;
+        }
+        .ant img {
+    display: block;
+    margin: 0 auto; /* căn giữa ảnh */
+    width: 100%;    /* chiếm hết chiều rộng khung chứa */
+    max-width: 400px; /* nhưng tối đa chỉ 400px thôi, không bị bể hình */
+    height: auto; /* tự điều chỉnh chiều cao theo tỷ lệ */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body style="background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230804/pngtree-a-close-up-picture-of-red-maple-leaves-in-the-fall-image_12997891.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
@@ -432,22 +470,22 @@ a {
 
     <script>
         const searchInput = document.getElementById('search');
-        const antList = document.getElementById('antList');
-        const ants = antList.getElementsByClassName('ant');
+        const ants = document.querySelectorAll('.ant');
 
-        searchInput.addEventListener('keyup', function() {
-            const filter = searchInput.value.toLowerCase();
-            for (let i = 0; i < ants.length; i++) {
-                const ant = ants[i];
-                const text = ant.textContent.toLowerCase();
-                if (text.includes(filter)) {
-                    ant.style.display = 'flex';
+        searchInput.addEventListener('input', function() {
+            const keyword = this.value.toLowerCase();
+            ants.forEach(ant => {
+                const antName = ant.querySelector('h2').textContent.toLowerCase();
+                if (keyword && antName.includes(keyword)) {
+                    ant.style.display = 'flex'; // Hiển thị nếu có từ khóa khớp
                 } else {
-                    ant.style.display = 'none';
+                    ant.style.display = 'none'; // Ẩn nếu không khớp
                 }
-            }
+            });
         });
     </script>
+
     <a href="index.html" class="back-button">⬅</a>
+    
 </body>
 </html>
