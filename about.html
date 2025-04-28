@@ -182,6 +182,11 @@ a {
   animation: fadeIn 1s ease-out forwards;
 }
 
+
+
+
+
+
     </style>
 </head>
 <body style="background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230804/pngtree-a-close-up-picture-of-red-maple-leaves-in-the-fall-image_12997891.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
@@ -501,22 +506,11 @@ a {
         </div>
     </div>
 
-    <script>
-        const searchInput = document.getElementById('search');
-        const ants = document.querySelectorAll('.ant');
 
-        searchInput.addEventListener('input', function() {
-            const keyword = this.value.toLowerCase();
-            ants.forEach(ant => {
-                const antName = ant.querySelector('h2').textContent.toLowerCase();
-                if (keyword && antName.includes(keyword)) {
-                    ant.style.display = 'flex'; // Hiển thị nếu có từ khóa khớp
-                } else {
-                    ant.style.display = 'none'; // Ẩn nếu không khớp
-                }
-            });
-        });
-    </script>
+
+
+    
+
 <script>
     window.addEventListener("scroll", function() {
         const ants = document.querySelectorAll('.ant');
@@ -536,6 +530,60 @@ a {
         }, 2000); // Chờ 2 giây rồi mới xuất hiện
     };
 </script>
+
+
+
+
+
+<script>
+    const searchInput = document.getElementById('search');  // Lấy ô tìm kiếm
+    const ants = document.querySelectorAll('.ant');  // Lấy tất cả loài kiến có class 'ant'
+
+    // Chặn hành động mặc định khi nhấn Enter trong ô tìm kiếm
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();  // Chặn hành động mặc định của Enter
+            this.blur();  // Làm mất focus khỏi ô tìm kiếm
+        }
+    });
+
+    // Tìm kiếm loài kiến khi gõ chữ
+    searchInput.addEventListener('input', function() {
+        const keyword = this.value.toLowerCase();  // Lấy từ khóa tìm kiếm và chuyển thành chữ thường
+        
+        ants.forEach(ant => {
+            const antName = ant.querySelector('h2').textContent.toLowerCase();  // Lấy tên loài kiến
+
+            // Kiểm tra nếu từ khóa tìm kiếm khớp với tên loài kiến
+            if (keyword && antName.includes(keyword)) {
+                ant.style.display = 'flex';  // Hiển thị loài kiến nếu khớp
+            } else {
+                ant.style.display = 'none';  // Ẩn loài kiến nếu không khớp
+            }
+        });
+    });
+
+    // Đảm bảo rằng sau khi cuộn, các phần tử vẫn được kiểm tra lại
+    window.addEventListener('scroll', function() {
+        const keyword = searchInput.value.toLowerCase();  // Lấy từ khóa tìm kiếm khi cuộn
+
+        ants.forEach(ant => {
+            const antName = ant.querySelector('h2').textContent.toLowerCase();  // Lấy tên loài kiến
+
+            // Kiểm tra nếu từ khóa tìm kiếm khớp với tên loài kiến
+            if (keyword && antName.includes(keyword)) {
+                ant.style.display = 'flex';  // Hiển thị loài kiến nếu khớp
+            } else {
+                ant.style.display = 'none';  // Ẩn loài kiến nếu không khớp
+            }
+        });
+    });
+</script>
+
+
+
+
+
 
     <a href="index.html" class="back-button">⬅</a>
     
