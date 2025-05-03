@@ -48,7 +48,6 @@ body {
 
 /* ô tìm kiếm */
 
-    
         body {
             font-family: Arial, sans-serif;
             background-color: hsl(0, 0%, 100%);
@@ -62,16 +61,8 @@ body {
             border-radius: 10px;
             box-shadow: 0 0 10px rgb(255, 0, 0);
         }
-        h1 {
-            text-align: center;
-        }
-        h4 {
-       position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      color: #ff0026;
-    }
+       
+
         input[type="text"] {
             width: 98%;
             padding: 10px;
@@ -146,25 +137,55 @@ body {
             background-color: hsl(0, 0%, 100%);
             padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgb(255, 0, 0);
-        }
+/* Mặc định cho máy tính: căn giữa */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+/* Trên thiết bị nhỏ hơn 768px: giữ trái, kéo rộng sang phải */
+@media (max-width: 768px){
+       .container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: 0;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+}
         h1 {
             text-align: center;
         }
-        input[type="text"] {
-            width: 87%;
-            padding: 15px;
-            margin-top: 9px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: 2px solid #000000;
-        }
+        .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    text-align: justify; /* Căn giữa nội dung bên trong */
+}
+
+input[type="text"] {
+    width: 90%;
+    max-width: 400px; /* Giới hạn chiều rộng trên màn hình lớn */
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
         .ant {
             display: none; /* Ẩn toàn bộ loài kiến khi vào trang */
             align-items: flex-start;
@@ -248,7 +269,7 @@ body {
             <div class="ant">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkJMrSx9bkeTnnhbc0TiXG0X8fdOoP2uYFAw&s" alt="Solenopsis invicta" onclick="openLightbox(this.src)">
                 <div class="ant-info">
-                    <h2>Kiến lửa nhiệt đới <li>(Solenopsis invicta)</li></h2>
+                    <h2>Kiến lửa nhiệt đới <b>(Solenopsis invicta)</b></h2>
                     <p>Được biết đến rộng rãi là "kiến lửa" nhờ khả năng tấn công mạnh mẽ và nọc độc có thể gây bỏng. Đây là một loài kiến xâm lấn mạnh mẽ ở nhiều khu vực, đặc biệt là Bắc Mỹ và Australia.</p>
                     <p><strong>Đặc điểm:</strong> Kiến lửa trưởng thành dài khoảng 4–6 mm, màu đỏ nâu, có thân hình mảnh mai và đuôi dài. Khi bị tấn công, chúng có thể chích nhiều lần liên tiếp, gây cảm giác đau rát và sưng tấy.</p>
                     <p><strong>Tập tính:</strong> Loài kiến này rất xâm lấn và có thể xây tổ ở bất cứ nơi nào từ đất, sân vườn, cho đến bên trong nhà. Chúng xây tổ ngầm và tạo ra các đồi tổ lớn, với hàng nghìn con kiến trong mỗi tổ.</p>
