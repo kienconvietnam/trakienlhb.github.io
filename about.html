@@ -6,7 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tra Cứu Các Loài Kiến</title>
     <style>
-        
+        /* giao diện đọc văn bản */
+.container body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f8f9fa;
+      margin: 40px;
+      color: #333;
+    }
+
+      main {
+    position: relative; /* Thêm dòng này nếu sử dụng absolute */
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+      #speak-btn {
+    position: absolute; /* hoặc fixed nếu muốn nó cố định khi cuộn */
+    top: 15px; /* điều chỉnh theo ý */
+    left: 420px; /* điều chỉnh theo ý */
+    display: block;
+    margin: -2px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #3C86E7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+    transition: background-color 0.3s ease;
+  }
+
+    #speak-btn:hover {
+      background-color: #c0392b;
+    }
+
+
+
+
+    
         body {
             font-family: Arial, sans-serif;
             background-color: hsl(0, 0%, 100%);
@@ -47,13 +90,13 @@
 
 a {
       position: fixed;
-      top: 40px;
-      left: 1,5px;
+      top: 9px;
+      left: 5px;
       z-index: 999;
       font-size: 20px;
       color: white;
       text-decoration: none;
-      padding: 5px 5px;
+      padding: 5px 10px;
       background-color: #007bff;
       border-radius: 5px;
       font-weight: bold;
@@ -182,8 +225,6 @@ a {
 .container {
   animation: fadeIn 1s ease-out forwards;
 }
-
-
 
 
 
@@ -441,7 +482,7 @@ a {
             <div class="ant">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Red_Weaver_Ant%2C_Oecophylla_smaragdina.jpg/500px-Red_Weaver_Ant%2C_Oecophylla_smaragdina.jpg" alt="Oecophylla smaragdina" onclick="openLightbox(this.src)">
                 <div class="ant-info">
-                    <h2>Kiến vàng (Oecophylla smaragdina)</h2>
+                    <h2>Kiến thợ dệt (Oecophylla smaragdina)</h2>
                     <p>Được gọi là "kiến vàng", là một trong những loài kiến nổi tiếng nhờ vào kỹ năng xây tổ cực kỳ độc đáo bằng cách kết nối lá cây với nhau bằng sợi tơ từ tuyến nước bọt của chúng. Loài kiến này sống chủ yếu ở các khu vực nhiệt đới và cận nhiệt đới.</p>
                     <p><strong>Đặc điểm:</strong> Kiến vàng có kích thước trung bình từ 5–8 mm, màu vàng nhạt đến nâu vàng. Đặc biệt, chúng có cơ thể dài và dáng mảnh, với đôi mắt lớn và khả năng di chuyển rất nhanh nhẹn trên các cành cây.</p>
                     <p><strong>Tập tính:</strong> Oecophylla smaragdina sống theo đàn lớn, thường xuyên xây tổ trên cây, đặc biệt là cây ăn quả, trong rừng nhiệt đới. Tổ của chúng được xây dựng từ nhiều lá cây, kết nối bằng tơ do kiến tiết ra. Loài này rất hiếu chiến và có thể tấn công kẻ xâm nhập khi có sự đe dọa đến tổ của chúng.</p>
@@ -1201,6 +1242,28 @@ a {
                 </div>
               </div>
               
+              <div class="ant">
+                <img src="https://i.pinimg.com/1200x/39/41/43/3941431d02caed895682ecaf4c94eb31.jpg" 
+                     alt="Mystrium camillae" 
+                     onclick="openLightbox(this.src)">
+                <div class="ant-info">
+                  <h2>Kiến búng hàm siêu âm (Mystrium camillae)</h2>
+                  <p><em>Mystrium camillae</em> là một trong những loài kiến kỳ lạ nhất từng được ghi nhận – nổi tiếng với cú búng hàm có tốc độ cao nhất từng thấy ở động vật. Phân bố tại Đông Nam Á, thường sống trong các khúc gỗ mục trong rừng rậm.</p>
+                  <p><strong>Đặc điểm:</strong> Dài 5–7 mm, thân đỏ nâu và hàm dưới dài bất thường. Hai hàm được giữ chặt lại bằng lực cơ học và bật ra nhanh như đạn bắn khi được kích hoạt.</p>
+                  <p><strong>Tập tính:</strong> Hoạt động về đêm. Là loài đơn độc hoặc theo nhóm nhỏ. Thường sống kín đáo, dùng tốc độ hàm cực cao để tiêu diệt hoặc làm choáng kẻ thù và con mồi.</p>
+                  <p><strong>Khả năng đặc biệt:</strong> Sở hữu cú búng hàm nhanh nhất trong giới côn trùng – tốc độ đo được lên tới 90 m/s (tương đương 324 km/h), tạo ra lực va chạm mạnh gấp nhiều lần trọng lượng cơ thể. Không chỉ dùng để tấn công mà còn để nảy ngược ra xa khi gặp nguy hiểm.</p>
+                  <p><strong>Tác động:</strong> Vô hại với con người. Là ví dụ điển hình cho cơ chế vận động siêu tốc và ứng dụng trong nghiên cứu robot sinh học.</p>
+                  <p><strong>Biện pháp kiểm soát:</strong> Không cần thiết. Là sinh vật cực kỳ độc đáo, cần được bảo tồn và nghiên cứu thêm.</p>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1289,6 +1352,30 @@ a {
 </script>
 
 
+<button id="speak-btn">🔊 Đọc văn bản</button>
+
+<script>
+  document.getElementById('speak-btn').addEventListener('click', function () {
+    const content = document.querySelector('main') || document.body;
+    const text = content.innerText;
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'vi-VN';
+
+    // Tìm giọng nữ nếu có
+    const voices = window.speechSynthesis.getVoices();
+    const femaleVietnamese = voices.find(v => v.lang === 'vi-VN' && v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('nữ'));
+
+    if (femaleVietnamese) {
+      utterance.voice = femaleVietnamese;
+    }
+
+    window.speechSynthesis.speak(utterance);
+  });
+
+  // Load giọng nói (phải gọi ít nhất 1 lần để trình duyệt cập nhật danh sách)
+  window.speechSynthesis.onvoiceschanged = () => {};
+</script>
 
 
 
