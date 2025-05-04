@@ -1460,7 +1460,26 @@ input[type="text"] {
 <button id="speak-btn">🗣️</button>
 
 <script>
-  
+  let vietnameseVoice = null;
+
+  function initVoices() {
+    const voices = speechSynthesis.getVoices();
+
+    // Tìm bất kỳ giọng tiếng Việt nào
+    vietnameseVoice = voices.find(v => v.lang === 'vi-VN');
+
+    // Debug (bạn có thể tắt dòng này sau khi test)
+    console.log('Danh sách giọng nói:', voices);
+  }
+
+  // Gọi ngay để khởi tạo nếu có sẵn
+  initVoices();
+
+  // Đảm bảo gọi lại khi trình duyệt tải giọng nói (cần thiết cho mobile)
+  window.speechSynthesis.onvoiceschanged = () => {
+    initVoices();
+  };
+
   document.getElementById('speak-btn').addEventListener('click', function () {
     const content = document.querySelector('main') || document.body;
     const text = content.innerText;
@@ -1468,19 +1487,15 @@ input[type="text"] {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'vi-VN';
 
-    // Tìm giọng nữ nếu có
-    const voices = window.speechSynthesis.getVoices();
-    const femaleVietnamese = voices.find(v => v.lang === 'vi-VN' && v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('nữ'));
-
-    if (femaleVietnamese) {
-      utterance.voice = femaleVietnamese;
+    // Gán giọng nếu có
+    if (vietnameseVoice) {
+      utterance.voice = vietnameseVoice;
+    } else {
+      alert("⚠️ Thiết bị của bạn không hỗ trợ giọng nói tiếng Việt. Vui lòng kiểm tra cài đặt TTS.");
     }
 
-    window.speechSynthesis.speak(utterance);
+    speechSynthesis.speak(utterance);
   });
-
-  // Load giọng nói (phải gọi ít nhất 1 lần để trình duyệt cập nhật danh sách)
-  window.speechSynthesis.onvoiceschanged = () => {};
 </script>
 
     <a href="index.html" class="back-button">⬅</a>
