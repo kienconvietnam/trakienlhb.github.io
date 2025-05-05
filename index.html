@@ -21,6 +21,7 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 1rem;
+      position: relative; /* Đảm bảo body có thể chứa các phần tử con đúng vị trí */
     }
 
     .grid-container {
@@ -52,6 +53,8 @@
       cursor: pointer;
       position: absolute;
       left: 1rem;
+      top: 1rem; /* Đảm bảo nó ở trên cùng */
+      z-index: 1000; /* Đặt nó lên trên các phần tử khác */
       box-shadow: 0 0 30px rgb(255, 255, 255);
     }
 
@@ -73,7 +76,7 @@
       color: rgb(0, 0, 0);
       padding: 1rem 1.5rem;
       transition: left 0.5s ease;
-      z-index: 999;
+      z-index: 999; /* Đảm bảo side menu không bị đè lên nút */
     }
 
     .side-menu.active {
@@ -95,10 +98,6 @@
 
     .side-menu a:hover {
       color: #ff0000;
-    }
-
-    .menu-toggle.hide {
-      display: none;
     }
 
     .carousel-box {
@@ -132,18 +131,22 @@
       100% { transform: translateX(-50%); }
     }
 
-    .carousel-track img:nth-child(1) { animation-delay: 0s; }
-    .carousel-track img:nth-child(2) { animation-delay: 0.3s; }
-    .carousel-track img:nth-child(3) { animation-delay: 0.6s; }
-    .carousel-track img:nth-child(4) { animation-delay: 0.9s; }
-    .carousel-track img:nth-child(5) { animation-delay: 1.2s; }
-    .carousel-track img:nth-child(6) { animation-delay: 1.5s; }
-    .carousel-track img:nth-child(7) { animation-delay: 0s; }
-    .carousel-track img:nth-child(8) { animation-delay: 0.3s; }
-    .carousel-track img:nth-child(9) { animation-delay: 0.6s; }
-    .carousel-track img:nth-child(10) { animation-delay: 0.9s; }
-    .carousel-track img:nth-child(11) { animation-delay: 1.2s; }
-    .carousel-track img:nth-child(12) { animation-delay: 1.5s; }
+    .image-section {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 90%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgb(255, 255, 255);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.03);
+    }
 
     .footer-box {
       display: flex;
@@ -184,41 +187,43 @@
       }
     }
 
-    .image-section {
-      margin-top: 1rem;
-      text-align: center;
+    /* Hiệu ứng khi vào trang */
+    body * {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .image-section img {
-      width: 90%;
-      max-width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgb(255, 255, 255);
-      transition: transform 0.3s ease;
+    body.loaded * {
+      opacity: 1;
+      transform: translateX(0);
     }
 
-    .image-section img:hover {
-      transform: scale(1.03);
-    }
-
-    .info-section {
-      margin-top: 1rem;
-      color: #fff;
-      text-align: center;
-    }
-
-    .info-card {
-      margin: 0.5rem auto;
-      font-size: 1.1rem;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      width: fit-content;
-    }
   </style>
 </head>
 <body>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
 
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      const menuToggle = document.querySelector('.menu-toggle');
+      menu.classList.toggle('active');
+      menuToggle.classList.toggle('hide');
+    }
+
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('sideMenu');
+      const menuToggle = document.querySelector('.menu-toggle');
+      if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        menu.classList.remove('active');
+        menuToggle.classList.remove('hide');
+      }
+    });
+  </script>
+  
   <div class="header-wrapper">
     <button class="menu-toggle" onclick="toggleMenu()">
       <span></span>
@@ -242,7 +247,6 @@
 
   <div class="carousel-box">
     <div class="carousel-track">
-      <!-- 12 ảnh carousel -->
       <img src="https://images.pexels.com/photos/842401/pexels-photo-842401.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
       <img src="https://images.pexels.com/photos/2454796/pexels-photo-2454796.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
       <img src="https://images.pexels.com/photos/1086882/pexels-photo-1086882.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
@@ -259,7 +263,7 @@
   </div>
 
   <div class="footer-box">
-    <button ><a href="about.html"> <span style="color: #000000;"><h1><b><u>Tra Kiến</u></b></h1></span></a></button>
+    <button><a href="about.html"><span style="color: #000000;"><h1><b><u>Tra Kiến</u></b></h1></span></a></button>
   </div>
 
   <div class="image-section">
@@ -271,24 +275,5 @@
     <div class="info-card">🌿 Giao diện gần gũi thiên nhiên</div>
     <div class="info-card">📱 Tối ưu trên mọi thiết bị</div>
   </div>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      const menuToggle = document.querySelector('.menu-toggle');
-      menu.classList.toggle('active');
-      menuToggle.classList.toggle('hide');
-    }
-
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('sideMenu');
-      const menuToggle = document.querySelector('.menu-toggle');
-      if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-        menu.classList.remove('active');
-        menuToggle.classList.remove('hide');
-      }
-    });
-  </script>
-
 </body>
 </html>
