@@ -1,0 +1,239 @@
+     /* giao diện đọc văn bản */
+body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f8f9fa;
+      margin: 40px;
+      color: #333;
+    }
+
+      main {
+    position: relative; /* Thêm dòng này nếu sử dụng absolute */
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+      #speak-btn {
+    position: absolute; /* hoặc fixed nếu muốn nó cố định khi cuộn */
+    top: 70px; /* điều chỉnh theo ý */
+    left: 14px; /* điều chỉnh theo ý */
+    display: block;
+    margin: -2px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+    #speak-btn:hover {
+      background-color: #817d7d;
+    }
+
+/* ô tìm kiếm */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(255, 0, 0);
+        }
+       
+
+        input[type="text"] {
+            width: 98%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        .ant {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            border-bottom: 1px solid #000000;
+        }
+
+        a {
+      position: fixed;
+      top: 110px;
+      left: 12px;
+      z-index: 999;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      padding: 3px 5px;
+      background-color: #007bff;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+.back-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+        .ant-info {
+            flex-grow: 1;
+        }
+        .ant-info p {
+            margin: 5px 0;
+        }
+        .ant {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+
+    .ant-info {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .ant {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .ant img {
+        width: 90%;
+      }
+
+      .ant-info {
+        text-align: left;
+        padding: 0 12px;
+      }
+    }
+    body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(0, 0%, 100%);
+            padding: 20px;
+        }
+/* Mặc định cho máy tính: căn giữa */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+/* Trên thiết bị nhỏ hơn 768px: giữ trái, kéo rộng sang phải */
+@media (max-width: 768px){
+       .container {
+    width: 100%;
+    max-width: 800px;
+    margin-left: 0;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+}
+        h1 {
+            text-align: center;
+        }
+        .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(255, 0, 0);
+    text-align: auto; /* Căn đều nội dung bên trong */
+}
+
+input[type="text"] {
+    width: 90%;
+    max-width: 400px; /* Giới hạn chiều rộng trên màn hình lớn */
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+        .ant {
+            display: none; /* Ẩn toàn bộ loài kiến khi vào trang */
+            align-items: flex-start;
+            padding: 10px;
+            border-bottom: 1px solid #000000;
+        }
+        .ant img {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .ant-info {
+            flex-grow: 1;
+        }
+        .ant-info p {
+            margin: 5px 0;
+        }
+        .ant img {
+    display: block;
+    margin: 0 auto; /* căn giữa ảnh */
+    width: 100%;    /* chiếm hết chiều rộng khung chứa */
+    max-width: 400px; /* nhưng tối đa chỉ 400px thôi, không bị bể hình */
+    height: auto; /* tự điều chỉnh chiều cao theo tỷ lệ */
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Áp dụng hiệu ứng cho các phần tử .ant */
+.ant {
+  animation: fadeIn 1s ease-out forwards;
+}
+/* Hiệu ứng xuất hiện mờ dần */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Di chuyển lên từ phía dưới */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Áp dụng hiệu ứng cho hộp tra cứu */
+.container {
+  animation: fadeIn 1s ease-out forwards;
+}

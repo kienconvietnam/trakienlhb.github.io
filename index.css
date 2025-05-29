@@ -1,0 +1,192 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: url('https://img.freepik.com/premium-photo/minecraft-landscape-outdoors-forest_53876-219712.jpg') no-repeat center center/cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      position: relative; /* Đảm bảo body có thể chứa các phần tử con đúng vị trí */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 0rem;
+    }
+
+    .header-wrapper {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.544);
+      padding: 2rem;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .header-box h1 {
+      font-size: 2.5rem;
+      margin-left: 64px;
+      margin-right: 0;
+    }
+
+    .menu-toggle {
+      background: rgb(4, 146, 58);
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      position: absolute;
+      left: 1rem;
+      top: 1rem; /* Đảm bảo nó ở trên cùng */
+      z-index: 1000; /* Đặt nó lên trên các phần tử khác */
+      box-shadow: 0 0 30px rgb(255, 255, 255);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 15px;
+      height: 1px;
+      margin: 5px;
+      background: white;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.651);
+      color: rgb(0, 0, 0);
+      padding: 1rem 1.5rem;
+      transition: left 0.5s ease;
+      z-index: 999; /* Đảm bảo side menu không bị đè lên nút */
+    }
+
+    .side-menu.active {
+      left: 0;
+    }
+
+    .side-menu h2 {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 0.5rem;
+    }
+
+    .side-menu a {
+      display: block;
+      color: #000000;
+      margin: 0.5rem 0;
+      text-decoration: none;
+    }
+
+    .side-menu a:hover {
+      color: #ff0000;
+    }
+
+    .carousel-box {
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 1rem 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scrollX 20s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track img {
+      height: 150px;
+      margin-right: 20px;
+      border-radius: 10px;
+      animation: waveMotion 2s ease-in-out infinite;
+    }
+
+    @keyframes waveMotion {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes scrollX {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .image-section {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 90%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgb(255, 255, 255);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.03);
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-box button {
+      flex: 0 1 190px;
+      min-width: 100px;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+
+    .footer-box button:hover {
+      background-color: #ffffff7c;
+      box-shadow: 0 0 50px rgb(0, 0, 0);
+    }
+
+    @media (max-width: 600px) {
+      .header-box h1 {
+        font-size: 1.8rem;
+      }
+
+      .carousel-box img {
+        height: 100px;
+      }
+
+      .footer-box button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+      }
+    }
+
+    /* Hiệu ứng khi vào trang */
+    body * {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    body.loaded * {
+      opacity: 1;
+      transform: translateX(0);
+    }
