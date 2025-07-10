@@ -1,0 +1,144 @@
+/* Thơ Loài Kiến */
+
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://img.lovepik.com/bg/20240129/Majestic-Minecraft-Castle-Amidst-Mountainous-Landscapes-A-Captivating-Background_3136285_wh860.jpg!/fw/860') no-repeat center center fixed;
+      background-size: cover;
+      color: #000000;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.15);
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+  .home-button-container {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+.home-button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.home-button:hover {
+  background-color: #1abc9c;
+}
+
+
+  .title-box {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8); /* nền mờ trắng */
+  padding: 15px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.8em;
+  color: #2c3e50;
+}
+
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      padding: 12px 20px;
+      width: 300px;
+      border: 2px solid #3498db;
+      border-radius: 30px;
+      outline: none;
+      transition: 0.3s;
+      font-size: 1em;
+    }
+
+    input[type="text"]:focus {
+      width: 400px;
+      border-color: #2ecc71;
+      box-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
+    }
+
+    .result-box {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideUp 0.5s ease;
+      display: none;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .not-found {
+      text-align: center;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+      color: #ffffff;
+    }
+.ant-poem {
+  font-family: 'Georgia', serif;
+  background-color: #fffbe6;
+  border-left: 5px solid #e25822;
+  padding: 16px;
+  margin-top: 10px;
+  line-height: 1.7;
+  border-radius: 8px;
+}
+.ant-poem p {
+  margin-bottom: 12px;
+}
+.not-found {
+  color: red;
+  font-weight: bold;
+}
+.ant-poem {
+  font-family: 'Segoe UI', 'Arial', 'Tahoma', 'Roboto', 'Noto Serif', 'Georgia', serif;
+}

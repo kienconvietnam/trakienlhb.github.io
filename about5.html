@@ -1,0 +1,267 @@
+<!-- Thơ Loài Kiến -->
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch Sử Các Loài Kiến</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="about5.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+      <div class="title-box">
+  <h1>Thơ LSPH</h1>
+</div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Nhập tên loài kiến...">
+      </div>
+    </header>
+
+    <div class="result-box" id="resultBox"></div>
+
+    <div class="home-button-container">
+  <a href="index.html" class="home-button">← Trang chủ</a>
+</div>
+
+<footer>
+  © 2025 Trang thông tin về loài kiến |
+</footer>
+
+  </div>
+<script>
+const antHistoryData = [
+  {
+    name: "Solenopsis geminata",
+    vietnameseName: "Kiến lửa Châu Mỹ",
+    imageAnt: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlz2PRht3Zz6NHwAz9MrPfRVbNjftYazBxJA&s",
+    discoverer: {
+      name: "Johan Christian Fabricius",
+      image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/J._C._Fabricius_%28d%C3%A9tail%29.jpg",
+      info: "Fabricius (1745–1808) là nhà côn trùng học Đan Mạch đã mô tả loài Solenopsis geminata vào năm 1804. Là học trò của Carl Linnaeus."
+    },
+    history: `
+     <div class="ant-poem">
+    <p>Ngày xưa đất Mỹ rợp rừng,<br>
+  Có loài kiến lửa ẩn lừng trong cây.</p>
+
+  <p>Bụi cỏ cháy đỏ chân mây,<br>
+  Người qua chạm phải, bỏ ngay lối đường.</p>
+
+  <p>Một nhà khoa học miệt mài,<br>
+  Tên là Fabricius chẳng nài gian truân.</p>
+
+  <p>Ông mang kính lúp bước chân,<br>
+  Lần theo dấu vết kiến dần hiện ra.</p>
+
+  <p>Năm <strong>một tám không bốn</strong> vang xa,<br>
+  Ông ghi chép lại, gọi là “Geminata”.</p>
+
+  <p>Tên khoa học ấy đặt ra,<br>
+  Là nhờ hình dạng – hai pha song hành.</p>
+
+  <p>Từ rừng nhiệt đới hoang xanh,<br>
+  Kiến lan khắp chốn, trở thành hiểm nguy.</p>
+
+  <p>Nhưng nhờ phát hiện kịp kỳ,<br>
+  Loài kiến này đã khắc ghi tên mình.</p>
+</div>
+
+    `,
+    keywords: ["solenopsis geminata", "kien lua", "kien lua do", "lửa đỏ", "kiến lửa", "lua do","kien lua chau my"]
+  }
+
+,{
+  name: "Solenopsis invicta",
+  vietnameseName: "Kiến lửa nhiệt đới",
+  imageAnt: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkJMrSx9bkeTnnhbc0TiXG0X8fdOoP2uYFAw&s",
+  discoverer: {
+    name: "William M. Wheeler",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/William_Morton_Wheeler.jpg",
+    info: "William M. Wheeler (1865–1937) là nhà côn trùng học người Mỹ, đã mô tả loài Solenopsis invicta vào năm 1942 dựa trên các mẫu vật thu thập từ Nam Mỹ."
+  },
+  history: `
+    <div class="ant-poem">
+      <p>Ở miền đất đỏ hoang sơ,<br>
+      Nam Mỹ rừng rậm bất ngờ cháy lên.</p>
+
+      <p>Những đàn kiến lửa rập rền,<br>
+      Cắn đau, lan rộng khắp miền nhiệt đới.</p>
+
+      <p>Wheeler thấy lạ, tới nơi,<br>
+      Quan sát từng tổ, từng nơi chúng nằm.</p>
+
+      <p>Năm <strong>một chín bốn hai</strong> âm thầm,<br>
+      Ông ghi chép lại, gọi thầm “Invicta”.</p>
+
+      <p>Tên khoa học ấy nói ra,<br>
+      Mang nghĩa “bất khuất” – thật là đúng tên.</p>
+
+      <p>Kiến theo tàu chở hàng lên,<br>
+      Xâm lăng khắp chốn, khó quên dấu mồi.</p>
+
+      <p>Nhờ ông phát hiện kịp thời,<br>
+      Giúp nhân loại biết kẻ trời chẳng yên!</p>
+    </div>
+  `,
+  keywords: ["solenopsis invicta", "kien lua nhap cu", "kien lua xam lan", "lua nhap", "lua do moi", "kien lua","kien lua nhiet doi"]
+}
+
+,{
+  name: "Camponotus inflatus",
+  vietnameseName: "Kiến mật",
+  imageAnt: "data:image/jpeg;base64,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", 
+  discoverer: {
+    name: "Wilhelm Ferdinand Erichson",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Zp_n3BxsyfZImVfn0EUqLH3QEEtbE8H8sw&s",
+    info: "Wilhelm F. Erichson (1809–1848) là nhà côn trùng học người Đức, đã mô tả loài Camponotus inflatus vào năm 1842, nổi tiếng với hiện tượng kiến mật dự trữ mật trong cơ thể."
+  },
+  history: `
+    <div class="ant-poem">
+      <p>Giữa miền hoang mạc khô rang,<br>
+      Có loài kiến sống dịu dàng, khác thay.</p>
+
+      <p>Chúng treo lơ lửng tầng đá,<br>
+      Bụng phình như hũ, ngọt ngà mật ong.</p>
+
+      <p>Erichson đã rất ngỡ ngàng,<br>
+      Khi nhìn tổ kiến rộn ràng treo cao.</p>
+
+      <p>Năm <strong>một tám bốn hai</strong> dâng trào,<br>
+      Ông ghi lại hết, truyền vào sử xanh.</p>
+
+      <p>Đặt tên "inflatus" chân thành,<br>
+      Vì thân kiến phình, chứa thành ngọt ngào.</p>
+
+      <p>Loài này nuôi dưỡng đồng bào,<br>
+      Trữ đường sống sót qua bao tháng ngày.</p>
+
+      <p>Kiến mật từ đó dâng đầy,<br>
+      Trở thành biểu tượng sống hay giữa đời.</p>
+    </div>
+  `,
+  keywords: ["camponotus inflatus", "kien mat", "kien duong", "kien bu phinh", "kien tui mat", "kien mat ong", "honeypot ant"]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+];
+
+function removeVietnameseTones(str) {
+  return str
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d");
+}
+
+document.getElementById("searchInput").addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    const query = removeVietnameseTones(this.value.trim().toLowerCase());
+    const resultBox = document.getElementById("resultBox");
+
+    let found = null;
+
+    for (let ant of antHistoryData) {
+      for (let keyword of ant.keywords) {
+        if (removeVietnameseTones(keyword).includes(query)) {
+          found = ant;
+          break;
+        }
+      }
+      if (found) break;
+    }
+
+    if (found) {
+      resultBox.innerHTML = `
+        <h2>${found.name}</h2>
+        <p><strong>Tên tiếng Việt:</strong> ${found.vietnameseName}</p>
+
+        <img src="${found.imageAnt}" alt="${found.name}" style="max-width:100%; border-radius:10px; margin-bottom:15px;">
+
+        <p><strong>Lịch sử phát hiện:</strong></p>
+        ${found.history}
+
+        <p><strong>Người phát hiện:</strong></p>
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <img src="${found.discoverer.image}" alt="${found.discoverer.name}" style="width: 120px; border-radius: 10px;">
+          <p style="margin: 0;"><strong>${found.discoverer.name}</strong><br>${found.discoverer.info}</p>
+        </div>
+      `;
+    } else {
+      resultBox.innerHTML = `<p class="not-found">❌ Không tìm thấy loài kiến phù hợp với: "${this.value}"</p>`;
+    }
+
+    resultBox.style.display = "block";
+  }
+});
+</script>
+
+
+
+
+</body>
+</html>
