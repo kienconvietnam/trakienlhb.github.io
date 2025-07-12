@@ -142,3 +142,51 @@ h1 {
 .ant-poem {
   font-family: 'Segoe UI', 'Arial', 'Tahoma', 'Roboto', 'Noto Serif', 'Georgia', serif;
 }
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* tăng cỡ chữ cơ bản */
+  }
+
+  .title-box {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.8em; /* giảm tiêu đề để vừa khung */
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  input[type="text"]:focus {
+    width: 95%;
+  }
+
+  .result-box {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  .ant-poem {
+    font-size: 1em;
+    padding: 12px;
+    margin: 10px 8px;
+  }
+
+  .home-button {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
