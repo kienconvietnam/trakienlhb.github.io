@@ -1,6 +1,4 @@
-/* Video */
-
-a {
+ a {
       position: fixed;
       top: 40px;
       left: 20px;
@@ -8,12 +6,12 @@ a {
       font-size: 18px;
       color: white;
       text-decoration: none;
-      padding: 2px 6px;
+      padding: 5px 17px;
       background-color: #007bff;
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s;
-    }
+    }s
     a:hover {
       background-color: #0056b3;
       box-shadow: 0 0 20px rgb(255, 255, 255);
